@@ -14,14 +14,14 @@ function showScreen(screenToShow) {
 const profileButtons= document.querySelectorAll(".profile-choice");
 profileButtons.forEach(function(button) {
     button.addEventListener("click", function() {
-        selectedProfile= button.querySelector(".name").textContent;
+        selectedProfile= button.dataset.profile;
         showScreen(occasionScreen);
     });
 });
 const occasionButtons= document.querySelectorAll(".occasion-choice");
 occasionButtons.forEach(function(button){
 button.addEventListener("click",function(){
-    selectedOccasion=button.querySelector(".name").textContent;
+    selectedOccasion= button.dataset.occasion;
    showScreen(checklistScreen);
  showChecklist();
    });
