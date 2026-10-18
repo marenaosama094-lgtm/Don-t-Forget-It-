@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+margin: 0;
+padding: 30px 20px;
+background-color: rgb(243,245,240);
+color: rgb(51,51,51);
+}
+h1{
+    text-align: center;
+font-size: 36px;
+margin-bottom: 10px;
+color: rgb(70,100,85);
+}
+h2,
+h3{
+    text-align: center;
+font-size: 24px;
+margin-bottom: 20px;
+}
+.profile-choice,
+.occasion-choice{
+    position: relative;
+    display: block;
+width: 100% ;
+margin-bottom: 12px;
+color: rgb(52,72,58);
+background-color: rgb(248,250,246);
+    border: 1px solid rgb(190,210,192);
+    border-radius: 12px;
+    padding: 16px;
+    padding-right: 45px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    min-height: 60px;
+    transition: background-color 0.2s ease;
+}
+.profile-options,
+.occasion-options{
+width: 100%;
+max-width: 400px;
+margin: 0 auto;
+}
+.occasion-choice .arrow,
+.profile-choice .arrow{
+     position: absolute;
+right: 16px;
+top: 50%;
+transform: translateY(-50%);
+}
+.icon{
+    font-size: 22px;
+}
+.name{
+    font-size: 16px ;
+    font-weight: bold;
+}
+.hidden{
+    display: none;
+}
+.tagline,
+.occasion-description {
+text-align: center;
+color: rgb(72,72,58);
+margin-bottom: 30px;
+margin-top: 0;
+}
+.profile-choice:hover,
+.occasion-choice:hover{
+    background-color: rgb(70,100,85);
+    COLOR: white;
+}
+#checklistScreen .add-item-area #addItemButton{
+display: block;
+padding: 12px 16px;
+border: 1px solid rgb(70,100,85);
+border-radius: 12px;
+background-color: rgb(70,100,85);
+color: white;
+font-size: 14px;
+font-weight: bold;
+flex-shrink: 0;
+white-space: nowrap;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+#checklistScreen .add-item-area #addItemButton:hover{
+    background-color: rgb(52,78,64);
+}
+#progressText {
+text-align: center;
+margin: 8px 0 16px;
+color: rgb(70,100,85);
+font-size: 16px;
+font-weight: bold;
+}
+#profileScreen,
+#occasionScreen,
+#checklistScreen,
+#completionScreen{
+max-width: 500px;
+margin: 30px auto;
+padding: 25px 20px;
+color: rgb(51,51,51);
+background-color:rgb(130,171,139) ;
+border: 1px solid rgb(105,145,115);
+border-radius:18px;
+} 
+.profile-choice:active,
+.occasion-choice:active{
+    background-color: rgb(221,235,221);
+    color: rgb(52,72,58);
+}
+.back-button{
+    align-self: flex-start;
+    display: block;
+    width: fit-content;
+    margin: auto 0 0;
+    margin-top: auto;
+    padding: 10px 20px;
+    border: 1px solid rgb(70,100,85) ;
+    border-radius: 10px;
+    background-color: rgb(70,100,85);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#occasionScreen>.back-button:hover,
+#checklistScreen>.back-button:hover{
+    background-color: rgb(52,78,64);
+}
+#occasionScreen>.back-button:active,
+#checklistScreen>.back-button:active{
+    background-color: rgb(221,235,221);
+    color: rgb(52,72,58);
+}
+#checklistScreen> button:not(.back-button),
+.summary-button{
+display: block;
+width: 100%;
+max-width: none;
+margin: 10px auto;
+padding: 12px 16px;
+background-color: rgb(70,100,85);
+color: white;
+border: 1px solid rgb(70,100,85);
+border-radius: 12px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+#checklistScreen> button:not(.back-button):hover,
+.summary-button:hover{
+    background-color: rgb(52,78,64);
+}
+#itemList,
+#summaryList{
+    list-style: none;
+    padding: 0;
+    margin: 12px auto;
+    max-width: 400px;
+    width: 100%;
+}
+#itemList li,
+#summaryList li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    color: rgb(52,72,58);
+    background-color: rgb(248,250,246);
+    border: 1px solid rgb(190,210,192);
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+#itemList li{
+justify-content: space-between;
+}
+#itemList li:hover,
+#summaryList li:hover{
+    background-color: rgb(232,240,230);
+}
+#itemList li label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+#itemList input[type="checkbox"]{
+ appearance: none;
+ -webkit-appearance: none;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 21px;
+    border: 2px solid rgb(130,171,139);
+    border-radius: 6px ;
+    background-color:rgb(248,250,246);
+    cursor: pointer;
+    display: inline-grid;
+    place-content: center;
+}
+#itemList input[type="checkbox"]:checked{
+    background-color: rgb(70,100,85);
+    border-color: rgb(70,100,85);
+}
+#itemList input[type="checkbox"]:checked::after{
+    content: "✓";
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+}
+#itemList .delete-item-button{
+    flex-shrink: 0;
+    padding: 4px 6px;
+    border: none;
+    background: transparent;
+    color: rgb(31, 26, 26);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+#itemList .delete-item-button:hover{
+    color: rgb(0, 0, 0);
+}
+.add-item-area{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 12px auto;
+}
+#newItemInput{
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid rgb(190,210,192);
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+#newItemInput:focus{
+    border-color: rgb(70,100,85);
+}
+#checklistScreen:not(.hidden){
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+#summaryList li::after{
+    content: "✓";
+    display: inline-grid;
+    color:white;
+   background-color: rgb(70,100,85);
+   border-radius: 6px;
+    font-size: 15px;
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
+    font-weight: bold;
+    line-height: 1;
+    place-content: center;
+}
+.summary-button:active{
+    background-color: rgb(221,235,221);
+    color: rgb(52,72,58);
+}
+#backToChecklist{
+    background-color: transparent;
+    color: rgb(52,72,58);
+    border: 1px solid rgb(52,72,58);
+}
+#backToChecklist:hover{
+    background-color: rgb(52,72,58);
+    color: white;
+}

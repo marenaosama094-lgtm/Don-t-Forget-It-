@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Don't forget it!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Don't Forget It!</h1>
+    <p class="tagline">Pack smart, stay organized, forget nothing :)</p>
+    <section id="profileScreen">
+        <h2>Who are you packing for?</h2>
+        <div class="profile-options">
+            <button class="profile-choice" type="button">
+                <span class="name">Boy</span>
+                <span class="icon">👦🏻</span>
+                <span class="arrow">›</span>
+            </button>
+            <button class="profile-choice" type="button">
+                <span class="name">Girl</span>
+                <span class="icon">👧🏻</span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+    </section>
+    <section id="occasionScreen" class="hidden">
+        <h3>What's your plan?</h3>
+        <p class="occasion-description">Choose your occasion</p>
+        <div class="occasion-options">
+            <button class="occasion-choice" type="button">
+                <span class="name">University</span>
+                <span class="icon">🎓</span>
+                <span class="arrow">›</span>
+            </button>
+            <button class="occasion-choice" type="button">
+                <span class="name">Day Out</span>
+                <span class="icon">☕</span>
+                <span class="arrow">›</span>
+            </button>
+            <button class="occasion-choice" type="button">
+                <span class="name">Travel</span>
+                <span class="icon">🧳</span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+        <button id="backToProfile" class="back-button" type="button">← Back</button>
+    </section>
+    <section id="checklistScreen" class="hidden">
+        <h2>Your Checklist</h2>
+        <p class="occasion-description">Check each item when it's ready.</p>
+        <ul id="itemList"></ul>
+        <p id="progressText">0 of 0 items ready</p>
+        <div class="add-item-area">
+            <input type="text" id="newItemInput" placeholder="Add a new item" aria-label="New item">
+            <button id="addItemButton" type="button">Add an item</button>
+        </div>
+        <button id="doneButton" type="button">Done</button>
+        <button id="resetButton" type="button">Reset Checklist</button>
+        <button id="backToOccasion" class="back-button" type="button">← Back</button>
+    </section>
+    <section id="completionScreen" class="hidden">
+        <h2>All Set!</h2>
+        <p class="occasion-description">You're ready to go! Have a great day!</p>
+        <ul id="summaryList"></ul>
+        <button id="backToChecklist" class="summary-button" type="button">← Back to Checklist</button>
+        <button id="startOver" class="summary-button" type="button">Start Over</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
