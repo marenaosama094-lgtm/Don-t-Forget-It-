@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Don't forget it!</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -51,7 +52,7 @@
         <ul id="itemList"></ul>
         <p id="progressText">0 of 0 items ready</p>
         <div class="add-item-area">
-            <input type="text" id="newItemInput" placeholder="Add a new item" aria-label="New item">
+            <input type="text" id="newItemInput" placeholder="Add a new item" aria-label="New item" maxlength="40" autocomplete="off" >
             <button id="addItemButton" type="button">Add an item</button>
         </div>
         <button id="doneButton" type="button">Done</button>
