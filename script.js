@@ -35,7 +35,7 @@ backToProfile.addEventListener("click",function(){
     showScreen(profileScreen);
 });
 const itemList= document.getElementById("itemList");
-const progressText = document.getElementById("progressText")
+const progressText = document.getElementById("progressText");
 const packingItems= {
     Boy:{
 University: ["Water bottle", "Laptop", "Notebooks", "Pens", "Student ID","Keys","Sunglasses"],
@@ -90,6 +90,11 @@ addItemButton.addEventListener("click", function() {
     updateProgress();
     newItemInput.value = "";
     newItemInput.focus();
+});
+newItemInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        addItemButton.click();
+    }
 });
 const resetButton = document.getElementById("resetButton");
 resetButton.addEventListener("click", function() {
