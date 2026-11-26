@@ -68,10 +68,12 @@ color: rgb(72,72,58);
 margin-bottom: 30px;
 margin-top: 0;
 }
+@media (hover: hover) {
 .profile-choice:hover,
 .occasion-choice:hover{
     background-color: rgb(70,100,85);
-    COLOR: white;
+    Color: white;
+   }
 }
 #checklistScreen .add-item-area #addItemButton{
 display: block;
@@ -177,6 +179,7 @@ transition: background-color 0.2s ease;
     background-color: rgb(248,250,246);
     border: 1px solid rgb(190,210,192);
     border-radius: 12px;
+    overflow-wrap: anywhere;
     transition: background-color 0.2s ease;
 }
 #itemList li{
@@ -191,6 +194,8 @@ justify-content: space-between;
     align-items: center;
     gap: 12px;
     cursor: pointer;
+    min-width: 0;
+    flex: 1;
 }
 #itemList input[type="checkbox"]{
  appearance: none;
@@ -220,7 +225,8 @@ justify-content: space-between;
 }
 #itemList .delete-item-button{
     flex-shrink: 0;
-    padding: 4px 6px;
+    min-width: 40px;
+    min-height: 40px;
     border: none;
     background: transparent;
     color: rgb(31, 26, 26);
@@ -244,7 +250,7 @@ justify-content: space-between;
     padding: 12px;
     border: 1px solid rgb(190,210,192);
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
     outline: none;
 }
 #newItemInput:focus{
@@ -281,4 +287,23 @@ justify-content: space-between;
 #backToChecklist:hover{
     background-color: rgb(52,72,58);
     color: white;
+}
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2,
+    h3 {
+        font-size: 21px;
+    }
+    #profileScreen,
+    #occasionScreen,
+    #checklistScreen,
+    #completionScreen {
+        margin: 16px auto;
+        padding: 20px 14px;
+    }
 }
